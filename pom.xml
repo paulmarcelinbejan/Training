@@ -75,7 +75,17 @@
 	        </dependency>
 	        <dependency>
 	            <groupId>com.paulmarcelinbejan</groupId>
-	            <artifactId>architecture-utils</artifactId>
+	            <artifactId>architecture-utils-io</artifactId>
+	            <version>${paulmarcelinbejan-architecture.version}</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>com.paulmarcelinbejan</groupId>
+	            <artifactId>architecture-utils-math</artifactId>
+	            <version>${paulmarcelinbejan-architecture.version}</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>com.paulmarcelinbejan</groupId>
+	            <artifactId>architecture-utils-time</artifactId>
 	            <version>${paulmarcelinbejan-architecture.version}</version>
 	        </dependency>
         
@@ -111,7 +121,15 @@
         </dependency>
         <dependency>
             <groupId>com.paulmarcelinbejan</groupId>
-            <artifactId>architecture-utils</artifactId>
+            <artifactId>architecture-utils-io</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.paulmarcelinbejan</groupId>
+            <artifactId>architecture-utils-math</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.paulmarcelinbejan</groupId>
+            <artifactId>architecture-utils-time</artifactId>
         </dependency>
 
         <!-- dependencies -->
