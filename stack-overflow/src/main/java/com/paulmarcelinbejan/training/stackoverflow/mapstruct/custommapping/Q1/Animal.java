@@ -1,4 +1,6 @@
-package com.paulmarcelinbejan.training.stackoverflow.mapstruct.custom_mapping.Q1.classes;
+package com.paulmarcelinbejan.training.stackoverflow.mapstruct.custommapping.Q1;
+
+import java.util.List;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -8,8 +10,10 @@ import lombok.experimental.FieldDefaults;
 @Data
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class AnimalType {
+public class Animal {
+	   
+	Long id;
+	   
+    List<AnimalType> animalTypes;
 
-	private Long id;
-	
 }

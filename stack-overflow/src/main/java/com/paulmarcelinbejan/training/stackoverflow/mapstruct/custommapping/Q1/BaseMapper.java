@@ -1,4 +1,4 @@
-package com.paulmarcelinbejan.training.stackoverflow.mapstruct.custom_mapping.Q1.classes;
+package com.paulmarcelinbejan.training.stackoverflow.mapstruct.custommapping.Q1;
 
 import java.util.List;
 
