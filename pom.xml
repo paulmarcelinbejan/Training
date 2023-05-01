@@ -29,7 +29,7 @@
         <!-- LOMBOK -->
         <lombok.version>1.18.24</lombok.version>
         <!-- PAUL MARCELIN BEJAN-->
-        <paulmarcelinbejan-architecture.version>1.0.0</paulmarcelinbejan-architecture.version>
+        <paulmarcelinbejan-toolbox.version>1.0.0</paulmarcelinbejan-toolbox.version>
     </properties>
 
     <modules>
@@ -65,28 +65,28 @@
             <!-- Architecture dependency -->
 	        <dependency>
 	            <groupId>com.paulmarcelinbejan</groupId>
-	            <artifactId>architecture-base</artifactId>
-	            <version>${paulmarcelinbejan-architecture.version}</version>
+	            <artifactId>toolbox-base</artifactId>
+	            <version>${paulmarcelinbejan-toolbox.version}</version>
 	        </dependency>
 	        <dependency>
 	            <groupId>com.paulmarcelinbejan</groupId>
-	            <artifactId>architecture-test</artifactId>
-	            <version>${paulmarcelinbejan-architecture.version}</version>
+	            <artifactId>toolbox-test</artifactId>
+	            <version>${paulmarcelinbejan-toolbox.version}</version>
 	        </dependency>
 	        <dependency>
 	            <groupId>com.paulmarcelinbejan</groupId>
-	            <artifactId>architecture-utils-io</artifactId>
-	            <version>${paulmarcelinbejan-architecture.version}</version>
+	            <artifactId>toolbox-utils-io</artifactId>
+	            <version>${paulmarcelinbejan-toolbox.version}</version>
 	        </dependency>
 	        <dependency>
 	            <groupId>com.paulmarcelinbejan</groupId>
-	            <artifactId>architecture-utils-math</artifactId>
-	            <version>${paulmarcelinbejan-architecture.version}</version>
+	            <artifactId>toolbox-utils-math</artifactId>
+	            <version>${paulmarcelinbejan-toolbox.version}</version>
 	        </dependency>
 	        <dependency>
 	            <groupId>com.paulmarcelinbejan</groupId>
-	            <artifactId>architecture-utils-time</artifactId>
-	            <version>${paulmarcelinbejan-architecture.version}</version>
+	            <artifactId>toolbox-utils-time</artifactId>
+	            <version>${paulmarcelinbejan-toolbox.version}</version>
 	        </dependency>
         
         </dependencies>
@@ -113,23 +113,23 @@
         <!-- Architecture dependency -->
         <dependency>
             <groupId>com.paulmarcelinbejan</groupId>
-            <artifactId>architecture-base</artifactId>
+            <artifactId>toolbox-base</artifactId>
         </dependency>
         <dependency>
             <groupId>com.paulmarcelinbejan</groupId>
-            <artifactId>architecture-test</artifactId>
+            <artifactId>toolbox-test</artifactId>
         </dependency>
         <dependency>
             <groupId>com.paulmarcelinbejan</groupId>
-            <artifactId>architecture-utils-io</artifactId>
+            <artifactId>toolbox-utils-io</artifactId>
         </dependency>
         <dependency>
             <groupId>com.paulmarcelinbejan</groupId>
-            <artifactId>architecture-utils-math</artifactId>
+            <artifactId>toolbox-utils-math</artifactId>
         </dependency>
         <dependency>
             <groupId>com.paulmarcelinbejan</groupId>
-            <artifactId>architecture-utils-time</artifactId>
+            <artifactId>toolbox-utils-time</artifactId>
         </dependency>
 
         <!-- dependencies -->
