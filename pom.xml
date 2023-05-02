@@ -62,29 +62,34 @@
                 <version>${lombok.version}</version>
             </dependency>
 
-            <!-- Architecture dependency -->
+            <!-- ToolBox dependency -->
 	        <dependency>
-	            <groupId>com.paulmarcelinbejan</groupId>
+	            <groupId>com.paulmarcelinbejan.toolbox</groupId>
 	            <artifactId>toolbox-base</artifactId>
 	            <version>${paulmarcelinbejan-toolbox.version}</version>
 	        </dependency>
 	        <dependency>
-	            <groupId>com.paulmarcelinbejan</groupId>
+	            <groupId>com.paulmarcelinbejan.toolbox</groupId>
 	            <artifactId>toolbox-test</artifactId>
 	            <version>${paulmarcelinbejan-toolbox.version}</version>
 	        </dependency>
 	        <dependency>
-	            <groupId>com.paulmarcelinbejan</groupId>
+	            <groupId>com.paulmarcelinbejan.toolbox</groupId>
 	            <artifactId>toolbox-utils-io</artifactId>
 	            <version>${paulmarcelinbejan-toolbox.version}</version>
 	        </dependency>
 	        <dependency>
-	            <groupId>com.paulmarcelinbejan</groupId>
+	            <groupId>com.paulmarcelinbejan.toolbox</groupId>
+	            <artifactId>toolbox-utils-mapping</artifactId>
+	            <version>${paulmarcelinbejan-toolbox.version}</version>
+	        </dependency>
+	        <dependency>
+	            <groupId>com.paulmarcelinbejan.toolbox</groupId>
 	            <artifactId>toolbox-utils-math</artifactId>
 	            <version>${paulmarcelinbejan-toolbox.version}</version>
 	        </dependency>
 	        <dependency>
-	            <groupId>com.paulmarcelinbejan</groupId>
+	            <groupId>com.paulmarcelinbejan.toolbox</groupId>
 	            <artifactId>toolbox-utils-time</artifactId>
 	            <version>${paulmarcelinbejan-toolbox.version}</version>
 	        </dependency>
@@ -110,25 +115,29 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
-        <!-- Architecture dependency -->
+        <!-- ToolBox dependency -->
         <dependency>
-            <groupId>com.paulmarcelinbejan</groupId>
+            <groupId>com.paulmarcelinbejan.toolbox</groupId>
             <artifactId>toolbox-base</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.paulmarcelinbejan</groupId>
+            <groupId>com.paulmarcelinbejan.toolbox</groupId>
             <artifactId>toolbox-test</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.paulmarcelinbejan</groupId>
+            <groupId>com.paulmarcelinbejan.toolbox</groupId>
             <artifactId>toolbox-utils-io</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.paulmarcelinbejan</groupId>
+	        <groupId>com.paulmarcelinbejan.toolbox</groupId>
+	        <artifactId>toolbox-utils-mapping</artifactId>
+	    </dependency>
+        <dependency>
+            <groupId>com.paulmarcelinbejan.toolbox</groupId>
             <artifactId>toolbox-utils-math</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.paulmarcelinbejan</groupId>
+            <groupId>com.paulmarcelinbejan.toolbox</groupId>
             <artifactId>toolbox-utils-time</artifactId>
         </dependency>
 
