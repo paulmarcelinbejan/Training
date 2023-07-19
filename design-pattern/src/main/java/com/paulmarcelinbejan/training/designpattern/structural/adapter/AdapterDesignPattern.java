@@ -44,8 +44,7 @@ public class AdapterDesignPattern {
 	private static void printLog(Circonferenza circonferenza, CilindroAdapter cilindroAdapter) {
 		double latoDelCubo = cilindroAdapter.getCubo().getLato();
 		String puo_nonpuo = circonferenza.eMaggioreDelCilindro(cilindroAdapter) ? " può" : " non può";
-		System.out
-				.println("Il cubo di lato " + latoDelCubo + puo_nonpuo + " attraversare la circonferenza di raggio 5");
+		System.out.println("Il cubo di lato " + latoDelCubo + puo_nonpuo + " attraversare la circonferenza di raggio 5");
 	}
 
 }

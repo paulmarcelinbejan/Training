@@ -1,6 +1,7 @@
 package com.paulmarcelinbejan.training.designpattern.behavioral.template.example;
 
 public class Facebook extends SocialNetwork {
+
 	public Facebook(String userName, String password) {
 		this.userName = userName;
 		this.password = password;
