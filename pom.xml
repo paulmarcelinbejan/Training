@@ -19,25 +19,29 @@
     <packaging>pom</packaging>
 
     <properties>
-		<!-- JAVA -->
+        <!-- JAVA -->
         <java.version>17</java.version>
         <!-- MAVEN -->
-		<maven.compiler.source>${java.version}</maven.compiler.source>
-    	<maven.compiler.target>${java.version}</maven.compiler.target>
-    	<!-- SPRING -->
-        <spring-boot.version>3.0.1</spring-boot.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+        <!-- SPRING -->
+        <spring-boot.version>3.1.0</spring-boot.version>
         <!-- LOMBOK -->
-        <lombok.version>1.18.24</lombok.version>
-        <!-- PAUL MARCELIN BEJAN-->
+        <lombok.version>1.18.28</lombok.version>
+        <!-- MAPSTRUCT -->
+        <org.mapstruct.version>1.5.5.Final</org.mapstruct.version>
+	    <lombok-mapstruct-binding.version>0.2.0</lombok-mapstruct-binding.version>
+        <!-- TOOLBOX -->
         <paulmarcelinbejan-toolbox.version>1.0.0</paulmarcelinbejan-toolbox.version>
     </properties>
 
     <modules>
-		<module>design-pattern</module>
-        <module>my-tests</module>
-        <module>stack-overflow</module>
-        <module>project-euler</module>
+        <module>design-pattern</module>
         <module>hacker-rank</module>
+        <module>my-tests</module>
+        <module>project-euler</module>
+        <module>stack-overflow</module>
     </modules>
 
     <dependencyManagement>
@@ -65,7 +69,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
         </dependency>
 
         <!-- Lombok dependencies -->
@@ -99,26 +102,73 @@
             <groupId>com.paulmarcelinbejan.toolbox</groupId>
             <artifactId>toolbox-utils-time</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.paulmarcelinbejan.toolbox</groupId>
+            <artifactId>toolbox-utils-text</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.paulmarcelinbejan.toolbox</groupId>
+            <artifactId>toolbox-utils-reflection</artifactId>
+        </dependency>
 
         <!-- dependencies -->
 
     </dependencies>
 
     <build>
+		<pluginManagement>
+	        <plugins>
+	            <plugin>
+	                <groupId>org.springframework.boot</groupId>
+	                <artifactId>spring-boot-maven-plugin</artifactId>
+	                <version>${spring-boot.version}</version>
+	                <configuration>
+	                    <excludes>
+	                        <exclude>
+	                            <groupId>org.projectlombok</groupId>
+	                            <artifactId>lombok</artifactId>
+	                        </exclude>
+	                    </excludes>
+	                </configuration>
+	            </plugin>
+	            <plugin>
+		            <groupId>org.apache.maven.plugins</groupId>
+		            <artifactId>maven-compiler-plugin</artifactId>
+		            <version>${maven-compiler-plugin.version}</version>
+		            <configuration>
+		                <source>${java.version}</source> <!-- depending on your project -->
+		                <target>${java.version}</target> <!-- depending on your project -->
+		                <annotationProcessorPaths>
+		                    <path>
+		                        <groupId>org.mapstruct</groupId>
+		                        <artifactId>mapstruct-processor</artifactId>
+		                        <version>${org.mapstruct.version}</version>
+		                    </path>
+		                    <!-- other annotation processors -->
+		                    <path>
+				                <groupId>org.projectlombok</groupId>
+				                <artifactId>lombok</artifactId>
+				                <version>${lombok.version}</version>
+				            </path>
+				            <dependency>
+				                <groupId>org.projectlombok</groupId>
+				                <artifactId>lombok-mapstruct-binding</artifactId>
+				                <version>${lombok-mapstruct-binding.version}</version>
+				            </dependency>
+		                </annotationProcessorPaths>
+		            </configuration>
+		        </plugin>
+	        </plugins>
+		</pluginManagement>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring-boot.version}</version>
-                <configuration>
-                    <excludes>
-                        <exclude>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                        </exclude>
-                    </excludes>
-                </configuration>
             </plugin>
+            <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
         </plugins>
     </build>
 
