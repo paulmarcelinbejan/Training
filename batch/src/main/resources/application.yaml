@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: batch
+    version: 1.0.0
+  banner:
+    location: classpath:banner.txt
+#  data:
+#    mongodb:
+#      user: "paulmarcelinbejan"
+#      password: "PaulMarcelinBejanDB"
+#      uri: mongodb+srv://paulmarcelinbejan:PaulMarcelinBejanDB@paulmarcelinbejan-clust.4xv9wlb.mongodb.net/
+#      #uri: mongodb://host:27017/db 
+  datasource:
+    url: jdbc:postgresql://localhost:5432/BatchDB
+    driverClassName: org.postgresql.Driver
+    username: "paulmarcelinbejan"
+    password: "#BatchDB!"
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    database-platform: org.postgresql.Driver
+    show-sql: 'true'
+    hibernate:
+      ddl-auto: update
+server:
+  port: '9999'
