@@ -8,15 +8,10 @@
   <artifactId>batch</artifactId>
   
   <dependencies>
-	  
-	<dependency>
-	    <groupId>org.springframework.batch</groupId>
-	    <artifactId>spring-batch-core</artifactId>
-	</dependency>
 	
 	<dependency>
-		<groupId>com.paulmarcelinbejan.toolbox</groupId>
-		<artifactId>toolbox-utils-io</artifactId>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-batch</artifactId>
 	</dependency>
 	
 	<dependency>
@@ -30,11 +25,6 @@
 	</dependency>
 	
 	<dependency>
-		<groupId>org.postgresql</groupId>
-		<artifactId>postgresql</artifactId>
-	</dependency>
-	
-	<dependency>
 	    <groupId>org.springframework.data</groupId>
 	    <artifactId>spring-data-jpa</artifactId>
 	</dependency>
@@ -42,6 +32,16 @@
 	<dependency>
 	    <groupId>org.springframework.data</groupId>
 	    <artifactId>spring-data-mongodb</artifactId>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.postgresql</groupId>
+		<artifactId>postgresql</artifactId>
+	</dependency>
+	
+	<dependency>
+		<groupId>com.paulmarcelinbejan.toolbox</groupId>
+		<artifactId>toolbox-utils-io</artifactId>
 	</dependency>
 
   </dependencies>

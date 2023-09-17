@@ -29,27 +29,14 @@ public class EmployeeReader implements ItemReader<Employee> {
 	
 	private MappingIterator<Employee> iterator;
 	
-//	private List<Employee> employees = List.of(new Employee("A", "a"), new Employee("B", "b"), new Employee("C", "c"), new Employee("D", "d"), new Employee("E", "e"), new Employee("F", "f"));
-//	
-//	private int index = 0;
-	
 	@Override
 	public Employee read() {
-		
-//		if (index < employees.size()) {
-//			Employee employee = employees.get(index);
-//			log.info("Reading item: {}", employee);
-//			index++;
-//			return employee;
-//		} else {
-//			return null;
-//		}
 		
 		if (iterator.hasNext()) {
 			
 			Employee employee = iterator.next();
 
-			log.info("Reading item: {}", employee);
+			log.info("Reading employee: {}", employee);
 			
 			return employee;
 			

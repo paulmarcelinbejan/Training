@@ -1,8 +1,5 @@
 package com.paulmarcelinbejan.batch.job.employee;
 
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
-
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.persistence.Column;
@@ -19,7 +16,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table(name = "employees")
-@Document(collection = "employees")
+//@Document(collection = "employees")
 public class Employee {
 
 	public Employee(String firstName, String lastName) {
@@ -32,14 +29,14 @@ public class Employee {
 	@Column(name = "id", nullable = false)
 	private int id;
 	
-	@Field
-	@Column(name = "firstName", nullable = false)
-	@JsonProperty(value = "firstName")
+//	@Field
+	@Column(name = "first_name", nullable = false)
+	@JsonProperty
 	private String firstName;
 	
-	@Field
-	@Column(name = "lastName", nullable = false)
-	@JsonProperty(value = "lastName")
+//	@Field
+	@Column(name = "last_name", nullable = false)
+	@JsonProperty
 	private String lastName;
 	
 }
