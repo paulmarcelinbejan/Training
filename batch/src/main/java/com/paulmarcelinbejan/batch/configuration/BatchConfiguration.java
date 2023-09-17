@@ -1,7 +1,5 @@
 package com.paulmarcelinbejan.batch.configuration;
 
-import javax.sql.DataSource;
-
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.JobExecutionListener;
 import org.springframework.batch.core.Step;
@@ -9,11 +7,7 @@ import org.springframework.batch.core.job.builder.JobBuilder;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.step.builder.StepBuilder;
-import org.springframework.batch.item.database.BeanPropertyItemSqlParameterSourceProvider;
-import org.springframework.batch.item.database.HibernateItemWriter;
-import org.springframework.batch.item.database.JdbcBatchItemWriter;
 import org.springframework.batch.item.database.JpaItemWriter;
-import org.springframework.batch.item.database.builder.JdbcBatchItemWriterBuilder;
 import org.springframework.batch.item.database.builder.JpaItemWriterBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -39,10 +33,6 @@ public class BatchConfiguration {
 	
 //	private final EmployeeWriter employeeWriter;
 	
-//	private final MongoItemWriter<Employee> employeeWriter;
-	
-//	private final JdbcBatchItemWriter<Employee> employeeWriter;
-	
 	@Bean
 	public Job employeeJob(JobRepository jobRepository, JobExecutionListener listener, Step step1) {
 		return new JobBuilder("employeeJob", jobRepository)
@@ -59,8 +49,7 @@ public class BatchConfiguration {
 				.<Employee, Employee>chunk(10, transactionManager)
 				.reader(employeeReader)
 				.processor(employeeProcessor)
-				.writer(employeeWriter(entityManagerFactory))
-//				.writer(employeeWriter(dataSource))
+				.writer(employeeJpaWriter(entityManagerFactory))
 				.build();
 	}
 	
@@ -70,26 +59,18 @@ public class BatchConfiguration {
 	}
 
 	@Bean
-	public JpaItemWriter<Employee> employeeWriter(EntityManagerFactory entityManagerFactory) {
+	public JpaItemWriter<Employee> employeeJpaWriter(EntityManagerFactory entityManagerFactory) {
 		return new JpaItemWriterBuilder<Employee>()
 				.entityManagerFactory(entityManagerFactory)
 				.build();
 	}
 	
 //	@Bean
-//	public MongoItemWriter<Employee> employeeWriterStep(MongoTemplate mongoTemplate) {
+//	public MongoItemWriter<Employee> employeeMongoWriter(MongoTemplate mongoTemplate) {
 //		return new MongoItemWriterBuilder<Employee>()
 //				.collection("employees")
 //				.template(mongoTemplate)
 //				.build();
-//	}
-
-//	@Bean
-//	public JdbcBatchItemWriter<Employee> employeeWriter(DataSource dataSource) {
-//		return new JdbcBatchItemWriterBuilder<Employee>()
-//				.itemSqlParameterSourceProvider(new BeanPropertyItemSqlParameterSourceProvider<>())
-//				.sql("INSERT INTO employees (first_name, last_name) VALUES (:firstName, :lastName)")
-//				.dataSource(dataSource).build();
 //	}
 	
 }
