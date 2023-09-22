@@ -42,7 +42,6 @@
         <module>my-tests</module>
         <module>project-euler</module>
         <module>stack-overflow</module>
-        <module>batch</module>
     </modules>
 
     <dependencyManagement>
