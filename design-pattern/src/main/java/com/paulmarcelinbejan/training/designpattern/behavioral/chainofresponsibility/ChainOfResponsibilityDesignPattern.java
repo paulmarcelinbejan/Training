@@ -1,6 +1,7 @@
 package com.paulmarcelinbejan.training.designpattern.behavioral.chainofresponsibility;
 
 import java.util.Scanner;
+
 import com.paulmarcelinbejan.training.designpattern.behavioral.chainofresponsibility.example.ATMDispenseChain;
 import com.paulmarcelinbejan.training.designpattern.behavioral.chainofresponsibility.example.Currency;
 
