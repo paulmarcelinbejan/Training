@@ -8,8 +8,6 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-import com.paulmarcelinbejan.training.stackoverflow.java.Q2.Car;
-
 class ReturnRecentDateTest {
 
 	Comparator<Car> bySold = Comparator.comparing(Car::getSold);
