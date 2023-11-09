@@ -1,6 +1,6 @@
 package com.paulmarcelinbejan.training.designpattern.structural.decorator;
 
-import com.paulmarcelinbejan.toolbox.constants.enums.DirectoryPath;
+import com.paulmarcelinbejan.toolbox.utils.io.enums.DirectoryPath;
 import com.paulmarcelinbejan.training.designpattern.structural.decorator.example.DataSourceDecorator;
 import com.paulmarcelinbejan.training.designpattern.structural.decorator.example.EncryptionDecorator;
 import com.paulmarcelinbejan.training.designpattern.structural.decorator.example.FileDataSource;
