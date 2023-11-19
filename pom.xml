@@ -95,6 +95,14 @@
             <artifactId>toolbox-utils-json</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.paulmarcelinbejan.toolbox</groupId>
+            <artifactId>toolbox-utils-pdf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.paulmarcelinbejan.toolbox</groupId>
+            <artifactId>toolbox-utils-yaml</artifactId>
+        </dependency>
+        <dependency>
 	        <groupId>com.paulmarcelinbejan.toolbox</groupId>
 	        <artifactId>toolbox-utils-mapping</artifactId>
 	    </dependency>

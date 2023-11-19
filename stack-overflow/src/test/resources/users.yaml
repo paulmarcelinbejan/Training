@@ -1,0 +1,26 @@
+ListOfUsers:
+  - User:
+      ID: 1
+      Name: "Jimmy Dean"
+      Address: "12 Riverview Drive"
+      City: "Greenview"
+  - User:
+      ID: 2
+      Name: "John Sheridan"
+      Address: "233X Blue Sector"
+      City: "Babylon 5"
+  - User:
+      ID: 3
+      Name: "John Chriton"
+      Address: "2nd Room"
+      City: "Moya the Ship"
+  - User:
+      ID: 4
+      Name: "James Kirk"
+      Address: "Captain's Quarters"
+      City: "USS Enterprise"
+  - User:
+      ID: 5
+      Name: "River Tan"
+      Address: "3rd Berth"
+      City: "Serenity"
