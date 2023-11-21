@@ -29,17 +29,28 @@ class YamlTest {
 
 	@Test
 	void writeYamlTest() throws IOException {
-		YamlReaderConfig readerConfig = new YamlReaderConfig(
-				Collections.emptyMap(), 
-				List.of(DeserializationFeature.UNWRAP_ROOT_VALUE), 
-				Collections.emptyList());
-		YamlWriterConfig writerConfig = new YamlWriterConfig(
-				Collections.emptyMap(), 
-				List.of(SerializationFeature.WRAP_ROOT_VALUE), 
-				Collections.emptyList());
-		YamlFileUtilsConfig yamlFileUtilsConfig = new YamlFileUtilsConfig(Collections.emptyList(), List.of(YAMLGenerator.Feature.INDENT_ARRAYS_WITH_INDICATOR), List.of(YAMLGenerator.Feature.WRITE_DOC_START_MARKER, YAMLGenerator.Feature.USE_NATIVE_TYPE_ID), readerConfig, writerConfig);
+		List<YAMLGenerator.Feature> enableYamlGeneratorFeatures = List.of(YAMLGenerator.Feature.INDENT_ARRAYS_WITH_INDICATOR);
+		List<YAMLGenerator.Feature> disableYamlGeneratorFeatures = List.of(YAMLGenerator.Feature.WRITE_DOC_START_MARKER, YAMLGenerator.Feature.USE_NATIVE_TYPE_ID);
 		
-		YamlFileUtils<DataList> yaml = new YamlFileUtils<>(DataList.class, yamlFileUtilsConfig);
+		YamlReaderConfig readerConfig = new YamlReaderConfig(
+				enableYamlGeneratorFeatures, 
+				disableYamlGeneratorFeatures, 
+				List.of(DeserializationFeature.UNWRAP_ROOT_VALUE), 
+				Collections.emptyList(),
+				Collections.emptyList(),
+				Collections.emptyMap());
+		
+		YamlWriterConfig writerConfig = new YamlWriterConfig(
+				enableYamlGeneratorFeatures, 
+				disableYamlGeneratorFeatures, 
+				List.of(SerializationFeature.WRAP_ROOT_VALUE), 
+				Collections.emptyList(),
+				Collections.emptyList(),
+				Collections.emptyMap());
+		
+		YamlFileUtilsConfig yamlFileUtilsConfig = new YamlFileUtilsConfig(readerConfig, writerConfig);
+		
+		YamlFileUtils yaml = new YamlFileUtils(yamlFileUtilsConfig);
 		FileInfo fileInfo = new FileInfo(DirectoryPath.SRC_TEST_RESOURCES.value, "users", YAML);
 		
 		DataList list = new DataList();
@@ -54,7 +65,7 @@ class YamlTest {
 			list.add(test);
 		}
 
-		yaml.write(fileInfo, list);
+		yaml.write(fileInfo, DataList.class, list);
 		
 		assertDoesNotThrow(() -> FileUtils.createFileReader(fileInfo));
 	}
