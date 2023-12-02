@@ -1,6 +1,6 @@
 package com.paulmarcelinbejan.training.stackoverflow.jackson.Q1;
 
-import static com.paulmarcelinbejan.toolbox.utils.io.config.FileType.YAML;
+import static io.github.paulmarcelinbejan.toolbox.utils.io.config.FileType.YAML;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 
 import java.io.IOException;
@@ -12,13 +12,14 @@ import org.junit.jupiter.api.Test;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.yaml.YAMLGenerator;
-import com.paulmarcelinbejan.toolbox.utils.io.FileUtils;
-import com.paulmarcelinbejan.toolbox.utils.io.config.FileInfo;
-import com.paulmarcelinbejan.toolbox.utils.io.enums.DirectoryPath;
-import com.paulmarcelinbejan.toolbox.utils.yaml.YamlFileUtils;
-import com.paulmarcelinbejan.toolbox.utils.yaml.config.YamlFileUtilsConfig;
-import com.paulmarcelinbejan.toolbox.utils.yaml.config.YamlReaderConfig;
-import com.paulmarcelinbejan.toolbox.utils.yaml.config.YamlWriterConfig;
+
+import io.github.paulmarcelinbejan.toolbox.utils.io.FileUtils;
+import io.github.paulmarcelinbejan.toolbox.utils.io.config.FileInfo;
+import io.github.paulmarcelinbejan.toolbox.utils.io.enums.DirectoryPath;
+import io.github.paulmarcelinbejan.toolbox.utils.yaml.YamlFileUtils;
+import io.github.paulmarcelinbejan.toolbox.utils.yaml.config.YamlFileUtilsConfig;
+import io.github.paulmarcelinbejan.toolbox.utils.yaml.config.YamlReaderConfig;
+import io.github.paulmarcelinbejan.toolbox.utils.yaml.config.YamlWriterConfig;
 
 /**
  * 

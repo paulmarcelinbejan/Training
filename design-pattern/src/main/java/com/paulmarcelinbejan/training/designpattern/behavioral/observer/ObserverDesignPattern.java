@@ -1,9 +1,10 @@
 package com.paulmarcelinbejan.training.designpattern.behavioral.observer;
 
-import com.paulmarcelinbejan.toolbox.utils.io.enums.DirectoryPath;
 import com.paulmarcelinbejan.training.designpattern.behavioral.observer.example.Editor;
 import com.paulmarcelinbejan.training.designpattern.behavioral.observer.example.EmailNotificationListener;
 import com.paulmarcelinbejan.training.designpattern.behavioral.observer.example.LogOpenListener;
+
+import io.github.paulmarcelinbejan.toolbox.utils.io.enums.DirectoryPath;
 
 // Observer Design Pattern
 //

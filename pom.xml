@@ -50,7 +50,7 @@
 
             <!-- ToolBox dependency -->
 			<dependency>
-				<groupId>com.paulmarcelinbejan.toolbox</groupId>
+				<groupId>io.github.paulmarcelinbejan.toolbox</groupId>
 				<artifactId>toolbox</artifactId>
 				<version>${paulmarcelinbejan-toolbox.version}</version>
 				<scope>import</scope>
@@ -80,47 +80,47 @@
 
         <!-- ToolBox dependency -->
         <dependency>
-            <groupId>com.paulmarcelinbejan.toolbox</groupId>
+            <groupId>io.github.paulmarcelinbejan.toolbox</groupId>
             <artifactId>toolbox-base</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.paulmarcelinbejan.toolbox</groupId>
+            <groupId>io.github.paulmarcelinbejan.toolbox</groupId>
             <artifactId>toolbox-test</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.paulmarcelinbejan.toolbox</groupId>
+            <groupId>io.github.paulmarcelinbejan.toolbox</groupId>
             <artifactId>toolbox-utils-csv</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.paulmarcelinbejan.toolbox</groupId>
+            <groupId>io.github.paulmarcelinbejan.toolbox</groupId>
             <artifactId>toolbox-utils-json</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.paulmarcelinbejan.toolbox</groupId>
+            <groupId>io.github.paulmarcelinbejan.toolbox</groupId>
             <artifactId>toolbox-utils-pdf</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.paulmarcelinbejan.toolbox</groupId>
+            <groupId>io.github.paulmarcelinbejan.toolbox</groupId>
             <artifactId>toolbox-utils-yaml</artifactId>
         </dependency>
         <dependency>
-	        <groupId>com.paulmarcelinbejan.toolbox</groupId>
+	        <groupId>io.github.paulmarcelinbejan.toolbox</groupId>
 	        <artifactId>toolbox-utils-mapping</artifactId>
 	    </dependency>
         <dependency>
-            <groupId>com.paulmarcelinbejan.toolbox</groupId>
+            <groupId>io.github.paulmarcelinbejan.toolbox</groupId>
             <artifactId>toolbox-utils-math</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.paulmarcelinbejan.toolbox</groupId>
+            <groupId>io.github.paulmarcelinbejan.toolbox</groupId>
             <artifactId>toolbox-utils-time</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.paulmarcelinbejan.toolbox</groupId>
+            <groupId>io.github.paulmarcelinbejan.toolbox</groupId>
             <artifactId>toolbox-utils-text</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.paulmarcelinbejan.toolbox</groupId>
+            <groupId>io.github.paulmarcelinbejan.toolbox</groupId>
             <artifactId>toolbox-utils-reflection</artifactId>
         </dependency>
 

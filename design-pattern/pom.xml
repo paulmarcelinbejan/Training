@@ -8,7 +8,7 @@
 	<artifactId>design-pattern</artifactId>
 	<dependencies>
 		<dependency>
-			<groupId>com.paulmarcelinbejan.toolbox</groupId>
+			<groupId>io.github.paulmarcelinbejan.toolbox</groupId>
 			<artifactId>toolbox-constants</artifactId>
 		</dependency>
 	</dependencies>
