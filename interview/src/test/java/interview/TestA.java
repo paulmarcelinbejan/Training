@@ -10,9 +10,9 @@ class TestA {
 		int x = 1;
 		
 		if(x == 10);
-			System.out.println("abc");
+			System.out.println("Hello");
 		
-		System.out.println("xyz");
+		System.out.println("world");
 		
 	}
 	
