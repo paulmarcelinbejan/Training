@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 /**
  * https://stackoverflow.com/questions/77866503/mapping-a-flattened-parent-child-list
  */
-class MyMapperTest {
+class MappingAFlattenedParentChildListTest {
 
 	@Test
 	void run() {
