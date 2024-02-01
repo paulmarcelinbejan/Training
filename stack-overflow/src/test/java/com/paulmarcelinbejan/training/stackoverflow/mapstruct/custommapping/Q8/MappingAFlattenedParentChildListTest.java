@@ -14,6 +14,7 @@ class MappingAFlattenedParentChildListTest {
 
 	@Test
 	void run() {
+
 		Flattened flat1 = new Flattened();
 		flat1.setParentId("1");
 		flat1.setParentFieldA(1);

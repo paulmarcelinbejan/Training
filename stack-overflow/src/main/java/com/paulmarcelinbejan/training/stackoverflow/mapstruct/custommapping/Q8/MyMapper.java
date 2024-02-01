@@ -28,9 +28,10 @@ public interface MyMapper {
 	}
 
 	@Named("mapFlattenedToParent")
-	@Mapping(target = "children", source = "flattenedChildren", qualifiedByName = "mapFlattenedToChild")
+	@Mapping(target = "children", source = "flattenedChildren", qualifiedByName = "mapFlattenedToChildren")
 	Parent mapFlattenedToParent(Flattened flattened, List<Flattened> flattenedChildren);
 
+	@Named("mapFlattenedToChildren")
 	@IterableMapping(qualifiedByName = "mapFlattenedToChild")
 	List<Child> mapFlattenedToChildren(List<Flattened> flattenedList);
 
