@@ -28,8 +28,8 @@ public class AdapterDesignPattern {
 		Cubo cuboPiccolo = new Cubo(3);
 		Cubo cuboMedio = new Cubo(7);
 		Cubo cuboGrande = new Cubo(10);
-		// circonferenza.eMaggioreDelCilindro(piccoloCubo); // Won't compile.
-		// circonferenza.eMaggioreDelCilindro(grandeCubo); // Won't compile.
+		// circonferenza.eMaggioreDelCilindro(cuboPiccolo); // Won't compile.
+		// circonferenza.eMaggioreDelCilindro(cuboGrande); // Won't compile.
 
 		// Adapter solves the problem.
 		CilindroAdapter cuboPiccoloAdapter = new CilindroAdapter(cuboPiccolo);
